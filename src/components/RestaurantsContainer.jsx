@@ -1,12 +1,13 @@
 
 import Restaurant from "./Restaurant";
+import {restaurants} from "../data/data"
 
 //Containers are for behind the scenes logic  
-function RestaurantsContainer(props) {
-  console.log(props)
+function RestaurantsContainer() {
+  console.log(restaurants);
   return (
     <div className="restaurantContainer">
-      {props.restaurants.map(restaurant => <Restaurant restaurant={restaurant} />)}
+      {restaurants.map(restaurant => <Restaurant restaurant={restaurant} />)}
     </div>
   );
 }
