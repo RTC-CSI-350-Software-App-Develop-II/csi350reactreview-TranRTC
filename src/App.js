@@ -1,7 +1,12 @@
 import "./App.css";
 
 import RestaurantsContainer from "./components/RestaurantsContainer";
-//App is the root of our application and where we load in our components.
+
+/* 
+Data of restaurants can be imported here and passed down
+App - ResaurantContainer - Restaurant
+*/
+import {restaurants} from "../src/data/data"
 
 
 
@@ -10,8 +15,7 @@ function App() {
 
   return (
     <div className="App">
-
-      <RestaurantsContainer />
+      <RestaurantsContainer restaurants={restaurants}/>
     </div>
   );
 }
